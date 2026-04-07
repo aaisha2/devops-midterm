@@ -1,0 +1,71 @@
+# COMSATS Student Registry — DevOps Midterm
+
+A full-stack Flask student registration portal with a production-grade dark UI.
+
+## Stack
+- **Backend**: Python Flask + SQLAlchemy (SQLite)
+- **Frontend**: Vanilla HTML/CSS/JS (embedded)
+- **Containerization**: Docker
+
+---
+
+## Run Locally
+
+```bash
+pip install -r requirements.txt
+python app.py
+# Visit http://localhost:5000
+```
+
+---
+
+## Docker Commands (Part 1 — 10 Marks)
+
+```bash
+# 1. Build the image
+docker build -t student-portal .
+
+# 2. Run locally in container
+docker run -p 5000:5000 student-portal
+
+# 3. Tag for Docker Hub (replace YOUR_USERNAME)
+docker tag student-portal YOUR_USERNAME/student-portal:latest
+
+# 4. Login to Docker Hub
+docker login
+
+# 5. Push to Docker Hub
+docker push YOUR_USERNAME/student-portal:latest
+```
+
+---
+
+## GitHub Commands (Part 3 — 5 Marks)
+
+```bash
+# Initialize repo
+git init
+git remote add origin https://github.com/YOUR_USERNAME/student-portal.git
+
+# Stage all files
+git add .
+
+# Commit
+git commit -m "feat: add student portal with Docker support"
+
+# Push
+git push -u origin main
+
+# Pull (if needed)
+git pull origin main
+```
+
+---
+
+## Features
+- Register students with name, roll, department, semester
+- Delete students
+- Search and sort table
+- Duplicate roll number validation
+- Live clock
+- Animated dark UI with grid background
